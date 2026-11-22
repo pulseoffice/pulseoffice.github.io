@@ -3,244 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PulseOffice</title>
-<meta name="description" content="PulseOffice is a free, open-source office suite for macOS, Windows and Linux: Folio for documents, Ledger for spreadsheets and Deck for presentations. ODF first, Office formats aligned.">
-<meta property="og:title" content="PulseOffice">
-<meta property="og:description" content="A free office suite for macOS, Windows and Linux: documents, spreadsheets and presentations.">
-<meta property="og:image" content="assets/ledger.png">
-<link rel="icon" type="image/png" href="assets/icon.png">
+<title>PulseOffice — Free Open-Source Office Suite for Linux, Windows and macOS</title>
+<meta name="description" content="PulseOffice is a free, open-source office suite for Linux, Windows and macOS: a word processor, spreadsheet and presentation app that opens and saves ODT, ODS, ODP, DOCX, XLSX and PPTX. A modern alternative to Microsoft Office.">
+<link rel="canonical" href="https://pulseoffice.github.io/">
+<link rel="alternate" hreflang="en" href="https://pulseoffice.github.io/">
+<link rel="alternate" hreflang="it" href="https://pulseoffice.github.io/it/">
+<link rel="alternate" hreflang="x-default" href="https://pulseoffice.github.io/">
+<meta name="theme-color" content="#4f46e5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PulseOffice">
+<meta property="og:url" content="https://pulseoffice.github.io/">
+<meta property="og:title" content="PulseOffice — Free Open-Source Office Suite">
+<meta property="og:description" content="Documents, spreadsheets and presentations for Linux, Windows and macOS. Opens and saves ODF and Microsoft Office files.">
+<meta property="og:image" content="https://pulseoffice.github.io/assets/ledger.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Ledger, the PulseOffice spreadsheet, with formulas, data bars and a chart">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PulseOffice — Free Open-Source Office Suite">
+<meta name="twitter:description" content="Documents, spreadsheets and presentations for Linux, Windows and macOS.">
+<meta name="twitter:image" content="https://pulseoffice.github.io/assets/ledger.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "PulseOffice",
+      "url": "https://pulseoffice.github.io/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Office suite",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "Free, open-source office suite with a word processor (Folio), a spreadsheet (Ledger) and a presentation app (Deck). Opens and saves ODT, ODS, ODP, DOCX, XLSX and PPTX.",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "downloadUrl": "https://github.com/pulseoffice/pulseoffice/releases/latest",
+      "screenshot": ["https://pulseoffice.github.io/assets/ledger.png", "https://pulseoffice.github.io/assets/folio.png", "https://pulseoffice.github.io/assets/deck.png"],
+      "image": "https://pulseoffice.github.io/assets/icon.png",
+      "inLanguage": ["en", "it", "de", "es", "fr"],
+      "featureList": ["Word processor", "Spreadsheet with 432 functions", "Presentations", "ODF and Office Open XML", "Macros in JavaScript and Python", "AI agent via MCP"],
+      "codeRepository": "https://github.com/pulseoffice/pulseoffice"
+    },
+    {
+      "@type": "WebSite",
+      "name": "PulseOffice",
+      "url": "https://pulseoffice.github.io/",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is PulseOffice free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PulseOffice is free and open source under the GPL-3.0 licence, with no subscription and no account." } },
+        { "@type": "Question", "name": "Can PulseOffice open Microsoft Word, Excel and PowerPoint files?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It opens and saves DOCX, XLSX and PPTX as well as the OpenDocument formats ODT, ODS and ODP, and warns before saving if a format cannot hold something." } },
+        { "@type": "Question", "name": "Which systems does PulseOffice run on?", "acceptedAnswer": { "@type": "Answer", "text": "Linux (AppImage for x86_64 and ARM64), Windows (x64 installer) and macOS (Apple silicon and Intel)." } },
+        { "@type": "Question", "name": "Is PulseOffice ready for everyday use?", "acceptedAnswer": { "@type": "Answer", "text": "Not yet. It is in active development: try it, report problems on GitHub and keep backups of important documents." } }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/png" href="/assets/icon.png">
+<link rel="apple-touch-icon" href="/assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #ffffff;
-  --bg-soft: #f6f7fb;
-  --surface: #ffffff;
-  --text: #0f172a;
-  --muted: #5b6477;
-  --line: #e4e7ef;
-  --folio: #2563eb;
-  --ledger: #16a34a;
-  --deck: #dc2626;
-  --accent: #4f46e5;
-  --shadow: 0 30px 60px -20px rgba(15, 23, 42, .25), 0 12px 24px -12px rgba(15, 23, 42, .15);
-  --radius: 16px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0b0f19;
-    --bg-soft: #111726;
-    --surface: #151c2c;
-    --text: #e8ecf5;
-    --muted: #9aa3b7;
-    --line: #232c40;
-    --accent: #818cf8;
-    --shadow: 0 30px 60px -20px rgba(0, 0, 0, .7), 0 12px 24px -12px rgba(0, 0, 0, .5);
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0b0f19;
-  --bg-soft: #111726;
-  --surface: #151c2c;
-  --text: #e8ecf5;
-  --muted: #9aa3b7;
-  --line: #232c40;
-  --accent: #818cf8;
-  --shadow: 0 30px 60px -20px rgba(0, 0, 0, .7), 0 12px 24px -12px rgba(0, 0, 0, .5);
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-a { color: inherit; }
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-
-nav.top {
-  position: sticky; top: 0; z-index: 10;
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter: saturate(160%) blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-nav.top .wrap { display: flex; align-items: center; gap: 28px; height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; text-decoration: none; }
-.brand img { width: 30px; height: 30px; }
-nav.top .links { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
-nav.top .links a { text-decoration: none; color: var(--muted); }
-nav.top .links a:hover { color: var(--text); }
-
-.button {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 22px; border-radius: 999px;
-  font-weight: 600; font-size: 15px; text-decoration: none;
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.button:hover { transform: translateY(-1px); }
-.button.primary { background: var(--text); color: var(--bg); box-shadow: 0 8px 20px -8px rgba(15,23,42,.5); }
-.button.ghost { border: 1px solid var(--line); background: var(--surface); }
-.button svg { width: 18px; height: 18px; }
-
-header.hero { position: relative; overflow: hidden; padding: 88px 0 40px; text-align: center; }
-header.hero::before {
-  content: ""; position: absolute; inset: -40% -10% auto -10%; height: 640px; z-index: -1;
-  background:
-    radial-gradient(40% 50% at 20% 40%, color-mix(in srgb, var(--folio) 22%, transparent), transparent 70%),
-    radial-gradient(40% 50% at 50% 20%, color-mix(in srgb, var(--ledger) 20%, transparent), transparent 70%),
-    radial-gradient(40% 50% at 80% 40%, color-mix(in srgb, var(--deck) 18%, transparent), transparent 70%);
-  filter: blur(10px);
-}
-.hero img.logo { width: 112px; height: 112px; filter: drop-shadow(0 18px 30px rgba(15,23,42,.25)); }
-.hero h1 { font-size: clamp(40px, 6vw, 68px); line-height: 1.05; letter-spacing: -.035em; margin: 22px 0 18px; font-weight: 800; }
-.hero h1 .grad {
-  background: linear-gradient(90deg, var(--folio), var(--ledger) 50%, var(--deck));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.hero p.lead { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 680px; margin: 0 auto 32px; }
-.hero .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.platforms { margin-top: 18px; font-size: 14px; color: var(--muted); }
-.wip {
-  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px;
-  padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600;
-  background: color-mix(in srgb, #f59e0b 16%, transparent); color: #b45309;
-  border: 1px solid color-mix(in srgb, #f59e0b 40%, transparent);
-}
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .wip { color: #fbbf24; } }
-:root[data-theme="dark"] .wip { color: #fbbf24; }
-.wip i { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; }
-
-.showcase { padding: 36px 0 90px; }
-.tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
-.tab {
-  border: 1px solid var(--line); background: var(--surface); color: var(--text);
-  padding: 10px 18px; border-radius: 999px; font: inherit; font-weight: 600; font-size: 15px;
-  cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
-}
-.tab .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
-.tab[aria-selected="true"] { background: var(--c); border-color: var(--c); color: #fff; }
-.tab[aria-selected="true"] .dot { background: #fff; }
-.frame {
-  border-radius: 14px; overflow: hidden; box-shadow: var(--shadow);
-  border: 1px solid var(--line); background: var(--surface);
-  max-width: 1100px; margin: 0 auto;
-}
-.frame img { display: block; width: 100%; height: auto; }
-.caption { text-align: center; color: var(--muted); margin-top: 20px; font-size: 15px; min-height: 1.6em; }
-
-section { padding: 90px 0; }
-section.soft { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 13px; font-weight: 700; color: var(--accent); }
-h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -.025em; line-height: 1.15; margin: 10px 0 16px; }
-.intro { color: var(--muted); font-size: 18px; max-width: 720px; }
-
-.modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
-.module {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 28px; position: relative; overflow: hidden;
-}
-.module::after { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--c); }
-.module .badge {
-  width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
-  background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); margin-bottom: 16px;
-}
-.module .badge svg { width: 24px; height: 24px; }
-.module h3 { margin: 0 0 2px; font-size: 22px; }
-.module .kind { color: var(--c); font-weight: 600; font-size: 14px; margin-bottom: 12px; }
-.module p { color: var(--muted); margin: 0 0 16px; }
-.module ul { margin: 0; padding: 0; list-style: none; font-size: 15px; }
-.module li { padding: 6px 0 6px 24px; position: relative; border-top: 1px dashed var(--line); }
-.module li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 8px; height: 8px; border-radius: 2px; background: var(--c); }
-.formats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-.formats span { font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 6px; background: var(--bg-soft); border: 1px solid var(--line); color: var(--muted); }
-
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
-.feature { padding: 26px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
-.feature .icon { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); margin-bottom: 14px; }
-.feature .icon svg { width: 22px; height: 22px; }
-.feature h3 { margin: 0 0 6px; font-size: 18px; }
-.feature p { margin: 0; color: var(--muted); font-size: 15px; }
-
-.split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.terminal {
-  background: #0d1117; color: #d6deeb; border-radius: 14px; padding: 22px 24px;
-  font: 14px/1.7 ui-monospace, "SF Mono", Menlo, Consolas, monospace; box-shadow: var(--shadow);
-  overflow-x: auto; border: 1px solid #1f2633;
-}
-.terminal .dots { display: flex; gap: 7px; margin-bottom: 16px; }
-.terminal .dots i { width: 11px; height: 11px; border-radius: 50%; background: #3a4150; }
-.terminal .dots i:nth-child(1) { background: #ff5f57; }
-.terminal .dots i:nth-child(2) { background: #febc2e; }
-.terminal .dots i:nth-child(3) { background: #28c840; }
-.terminal .you { color: #7fdbca; }
-.terminal .tool { color: #c792ea; }
-.terminal .ok { color: #addb67; }
-.terminal .dim { color: #637777; }
-.checks { list-style: none; padding: 0; margin: 24px 0 0; }
-.checks li { padding: 8px 0 8px 32px; position: relative; }
-.checks li::before {
-  content: ""; position: absolute; left: 0; top: 11px; width: 20px; height: 20px; border-radius: 50%;
-  background: color-mix(in srgb, var(--accent) 16%, transparent);
-}
-.checks li::after {
-  content: ""; position: absolute; left: 7px; top: 15px; width: 6px; height: 10px;
-  border: solid var(--accent); border-width: 0 2px 2px 0; transform: rotate(45deg);
-}
-
-.download { text-align: center; }
-.download .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 40px auto 0; max-width: 900px; }
-.download .card {
-  padding: 28px 22px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface);
-  text-decoration: none; transition: transform .15s ease, border-color .15s ease;
-}
-.download .card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.download .card svg { width: 34px; height: 34px; margin-bottom: 10px; }
-.download .card strong { display: block; font-size: 18px; }
-.download .card span { color: var(--muted); font-size: 14px; }
-.build { margin-top: 36px; color: var(--muted); font-size: 15px; }
-.build code { background: var(--bg-soft); border: 1px solid var(--line); padding: 2px 8px; border-radius: 6px; font-size: 14px; }
-
-footer { border-top: 1px solid var(--line); padding: 36px 0; color: var(--muted); font-size: 14px; }
-footer .wrap { display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; align-items: center; }
-footer a { color: var(--muted); }
-
-@media (max-width: 900px) {
-  .modules, .features, .download .cards { grid-template-columns: 1fr; }
-  .split { grid-template-columns: 1fr; gap: 32px; }
-  nav.top .links a.hide-sm { display: none; }
-}
-@media (max-width: 560px) {
-  .wrap { padding: 0 16px; }
-  nav.top .links { gap: 14px; }
-  header.hero { padding-top: 56px; }
-  section { padding: 64px 0; }
-}
-</style>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <nav class="top">
   <div class="wrap">
-    <a class="brand" href="#"><img src="assets/icon.png" alt="">PulseOffice</a>
+    <a class="brand" href="/"><img src="assets/icon.png" alt="">PulseOffice</a>
     <div class="links">
       <a href="#modules">Apps</a>
       <a href="#features" class="hide-sm">Features</a>
       <a href="#agent" class="hide-sm">AI agent</a>
       <a href="#download">Download</a>
       <a href="https://github.com/pulseoffice/pulseoffice">GitHub</a>
+      <span class="lang"><a href="/" aria-current="page" hreflang="en">EN</a><a href="/it/" hreflang="it" lang="it">IT</a></span>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <img class="logo" src="assets/icon.png" alt="PulseOffice icon">
+    <img class="logo" src="assets/icon.png" width="112" height="112" alt="PulseOffice icon">
     <div><span class="wip"><i></i>Work in progress · not yet ready for everyday use</span></div>
-    <h1>The office suite,<br><span class="grad">rebuilt from scratch.</span></h1>
+    <h1>The free office suite,<br><span class="grad">rebuilt from scratch.</span></h1>
     <p class="lead">Documents, spreadsheets and presentations in one free, open-source app for macOS, Windows and Linux.
       OpenDocument by default, Microsoft Office files kept in step.</p>
     <div class="actions">
@@ -417,10 +269,24 @@ footer a { color: var(--muted); }
   </div>
 </section>
 
+<section class="soft" id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Questions</div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details><summary>Is PulseOffice free?</summary><p>Yes. PulseOffice is free and open source under the GPL-3.0 licence, with no subscription and no account.</p></details>
+      <details><summary>Can PulseOffice open Microsoft Word, Excel and PowerPoint files?</summary><p>Yes. It opens and saves DOCX, XLSX and PPTX as well as the OpenDocument formats ODT, ODS and ODP, and warns before saving if a format cannot hold something. See <a href="/open-docx-xlsx-pptx-on-linux/">how to open Office files on Linux</a>.</p></details>
+      <details><summary>Which systems does PulseOffice run on?</summary><p>Linux (AppImage for x86_64 and ARM64), Windows (x64 installer) and macOS (Apple silicon and Intel).</p></details>
+      <details><summary>Is it an alternative to Microsoft Office?</summary><p>That is the goal: documents, spreadsheets and presentations with the same file formats, free and on every system. See <a href="/free-microsoft-office-alternative/">PulseOffice as a free Microsoft Office alternative</a>.</p></details>
+      <details><summary>Is PulseOffice ready for everyday use?</summary><p>Not yet. It is in active development: try it, report problems on GitHub and keep backups of important documents.</p></details>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div>PulseOffice · GPL-3.0-only · Developed with the help of AI (<a href="https://claude.com/claude-code">Claude Code</a>)</div>
-    <div><a href="https://github.com/pulseoffice/pulseoffice">GitHub</a> · <a href="https://github.com/pulseoffice/pulseoffice/releases">Releases</a> · <a href="https://github.com/pulseoffice/pulseoffice/blob/main/LICENSE">License</a></div>
+    <div><a href="/free-microsoft-office-alternative/">Microsoft Office alternative</a> · <a href="/open-docx-xlsx-pptx-on-linux/">Office files on Linux</a> · <a href="https://github.com/pulseoffice/pulseoffice">GitHub</a> · <a href="https://github.com/pulseoffice/pulseoffice/releases">Releases</a> · <a href="https://github.com/pulseoffice/pulseoffice/blob/main/LICENSE">License</a></div>
   </div>
 </footer>
 
