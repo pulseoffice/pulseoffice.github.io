@@ -219,3 +219,14 @@ footer a { color: var(--muted); }
 .lang { display: flex; gap: 10px; font-size: 14px; }
 .lang a { text-decoration: none; color: var(--muted); }
 .lang a[aria-current="page"] { color: var(--text); font-weight: 700; }
+
+nav.top .brand { flex-shrink: 0; }
+nav.top .links { align-items: center; min-width: 0; }
+footer .lang { width: 100%; justify-content: center; display: none; }
+@media (max-width: 720px) {
+  nav.top .lang { display: none; }
+  footer .lang { display: flex; }
+}
+@media (max-width: 560px) {
+  nav.top .links a.hide-xs { display: none; }
+}
