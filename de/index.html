@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PulseOffice — Kostenlose Open-Source-Office-Suite für Linux, Windows und macOS</title>
+<meta name="description" content="PulseOffice ist eine kostenlose Open-Source-Office-Suite für Linux, Windows und macOS: Textverarbeitung, Tabellenkalkulation und Präsentationen, die ODT, ODS, ODP, DOCX, XLSX und PPTX öffnen und speichern. Eine moderne Alternative zu Microsoft Office.">
+<link rel="canonical" href="https://pulseoffice.github.io/de/">
+<link rel="alternate" hreflang="en" href="https://pulseoffice.github.io/">
+<link rel="alternate" hreflang="it" href="https://pulseoffice.github.io/it/">
+<link rel="alternate" hreflang="de" href="https://pulseoffice.github.io/de/">
+<link rel="alternate" hreflang="es" href="https://pulseoffice.github.io/es/">
+<link rel="alternate" hreflang="fr" href="https://pulseoffice.github.io/fr/">
+<link rel="alternate" hreflang="x-default" href="https://pulseoffice.github.io/">
+<meta name="theme-color" content="#4f46e5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PulseOffice">
+<meta property="og:url" content="https://pulseoffice.github.io/de/">
+<meta property="og:title" content="PulseOffice — Kostenlose Open-Source-Office-Suite">
+<meta property="og:description" content="Dokumente, Tabellen und Präsentationen für Linux, Windows und macOS. Öffnet und speichert ODF- und Microsoft-Office-Dateien.">
+<meta property="og:image" content="https://pulseoffice.github.io/assets/ledger.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Ledger, die Tabellenkalkulation von PulseOffice, mit Formeln, Datenbalken und einem Diagramm">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PulseOffice — Kostenlose Open-Source-Office-Suite">
+<meta name="twitter:description" content="Dokumente, Tabellen und Präsentationen für Linux, Windows und macOS.">
+<meta name="twitter:image" content="https://pulseoffice.github.io/assets/ledger.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "PulseOffice",
+      "url": "https://pulseoffice.github.io/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Office suite",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "Free, open-source office suite with a word processor (Folio), a spreadsheet (Ledger) and a presentation app (Deck). Opens and saves ODT, ODS, ODP, DOCX, XLSX and PPTX.",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "downloadUrl": "https://github.com/pulseoffice/pulseoffice/releases/latest",
+      "screenshot": ["https://pulseoffice.github.io/assets/ledger.png", "https://pulseoffice.github.io/assets/folio.png", "https://pulseoffice.github.io/assets/deck.png"],
+      "image": "https://pulseoffice.github.io/assets/icon.png",
+      "inLanguage": ["en", "it", "de", "es", "fr"],
+      "featureList": ["Word processor", "Spreadsheet with 432 functions", "Presentations", "ODF and Office Open XML", "Macros in JavaScript and Python", "AI agent via MCP"],
+      "codeRepository": "https://github.com/pulseoffice/pulseoffice"
+    },
+    {
+      "@type": "WebSite",
+      "name": "PulseOffice",
+      "url": "https://pulseoffice.github.io/de/",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Ist PulseOffice kostenlos?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. PulseOffice ist kostenlos und Open Source unter der Lizenz GPL-3.0, ohne Abonnement und ohne Konto." } },
+        { "@type": "Question", "name": "Kann PulseOffice Word-, Excel- und PowerPoint-Dateien öffnen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Es öffnet und speichert DOCX, XLSX und PPTX sowie die OpenDocument-Formate ODT, ODS und ODP und warnt vor dem Speichern, wenn ein Format etwas nicht aufnehmen kann." } },
+        { "@type": "Question", "name": "Auf welchen Systemen läuft PulseOffice?", "acceptedAnswer": { "@type": "Answer", "text": "Linux (AppImage für x86_64 und ARM64), Windows (x64-Installer) und macOS (Apple Silicon und Intel)." } },
+        { "@type": "Question", "name": "Ist PulseOffice für den Alltag bereit?", "acceptedAnswer": { "@type": "Answer", "text": "Noch nicht. Es wird aktiv entwickelt: Probieren Sie es aus, melden Sie Probleme auf GitHub und sichern Sie wichtige Dokumente." } }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/png" href="/assets/icon.png">
+<link rel="apple-touch-icon" href="/assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="/de/"><img src="/assets/icon.png" alt="">PulseOffice</a>
+    <div class="links">
+      <a href="#modules">Apps</a>
+      <a href="#features" class="hide-sm">Funktionen</a>
+      <a href="#agent" class="hide-sm">KI-Agent</a>
+      <a href="#download">Herunterladen</a>
+      <a href="https://github.com/pulseoffice/pulseoffice">GitHub</a>
+      <span class="lang"><a href="/" hreflang="en" lang="en">EN</a><a href="/it/" hreflang="it" lang="it">IT</a><a href="/de/" hreflang="de" lang="de" aria-current="page">DE</a><a href="/es/" hreflang="es" lang="es">ES</a><a href="/fr/" hreflang="fr" lang="fr">FR</a></span>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="/assets/icon.png" width="112" height="112" alt="PulseOffice-Symbol">
+    <div><span class="wip"><i></i>In Entwicklung · noch nicht für den Alltag bereit</span></div>
+    <h1>Die kostenlose Office-Suite,<br><span class="grad">von Grund auf neu gebaut.</span></h1>
+    <p class="lead">Dokumente, Tabellen und Präsentationen in einer kostenlosen Open-Source-App für macOS, Windows und Linux. OpenDocument als Standard, Microsoft-Office-Dateien immer im Gleichschritt.</p>
+    <div class="actions">
+      <a class="button primary" href="https://github.com/pulseoffice/pulseoffice/releases/latest">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>Herunterladen</a>
+      <a class="button ghost" href="https://github.com/pulseoffice/pulseoffice">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 00-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0012 .5z"/></svg>Quellcode</a>
+    </div>
+    <div class="platforms">macOS (Apple Silicon und Intel) · Windows · Linux (AppImage) · GPL-3.0</div>
+  </div>
+</header>
+
+<div class="showcase">
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" style="--c: var(--ledger)" aria-selected="true" data-shot="ledger"><span class="dot"></span>Ledger</button>
+      <button class="tab" role="tab" style="--c: var(--folio)" aria-selected="false" data-shot="folio"><span class="dot"></span>Folio</button>
+      <button class="tab" role="tab" style="--c: var(--deck)" aria-selected="false" data-shot="deck"><span class="dot"></span>Deck</button>
+    </div>
+    <div class="frame"><img id="shot" src="/assets/ledger.png" width="1280" height="800" alt="Ledger mit einer Umsatztabelle nach Regionen, Formeln, Datenbalken, Farbskala und Säulendiagramm"></div>
+    <p class="caption" id="caption">Ledger: Formeln, bedingte Formatierung und Diagramme, die in die anderen Apps wandern.</p>
+  </div>
+</div>
+
+<section class="soft" id="modules">
+  <div class="wrap">
+    <div class="eyebrow">Drei Apps, ein Kern</div>
+    <h2>Alles, was Sie schreiben, rechnen und präsentieren.</h2>
+    <p class="intro">Folio, Ledger und Deck teilen sich eine Engine für Text, Diagramme, Formen und Tabellen: Ein Objekt aus einer App kommt in den anderen als es selbst an, nicht als Bild.</p>
+    <div class="modules">
+      <article class="module" style="--c: var(--folio)">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h6"/></svg></div>
+        <h3>Folio</h3>
+        <div class="kind">Textverarbeitung</div>
+        <p>Lange Dokumente richtig gemacht, vom ersten Entwurf bis zur signierten Endfassung.</p>
+        <ul>
+          <li>Formatvorlagen, Abschnitte, Spalten, Kopf- und Fußzeilen</li>
+          <li>Änderungsverfolgung und Kommentare mit Antworten</li>
+          <li>Inhaltsverzeichnisse, Register, Fußnoten, Serienbriefe</li>
+          <li>Rechts-nach-links- und komplexe Schriften</li>
+        </ul>
+        <div class="formats"><span>ODT</span><span>DOCX</span><span>RTF</span><span>HTML</span><span>EPUB</span><span>PDF</span></div>
+      </article>
+      <article class="module" style="--c: var(--ledger)">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div>
+        <h3>Ledger</h3>
+        <div class="kind">Tabellenkalkulation</div>
+        <p>Eine vollständige Rechen-Engine, keine Teilmenge: alle 432 Funktionen der Referenz-Tabellenkalkulationen.</p>
+        <ul>
+          <li>Pivot-Tabellen, Filter, Szenarien und Zielwertsuche</li>
+          <li>Bedingte Formatierung, Datenbalken und Farbskalen</li>
+          <li>Diagramme, Gültigkeitsprüfung und Schutz</li>
+          <li>Externe Daten: ODBC, SQL Server, PostgreSQL, MySQL, SQLite</li>
+        </ul>
+        <div class="formats"><span>ODS</span><span>XLSX</span><span>CSV</span><span>PDF</span></div>
+      </article>
+      <article class="module" style="--c: var(--deck)">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/></svg></div>
+        <h3>Deck</h3>
+        <div class="kind">Präsentationen</div>
+        <p>Alle Standardlayouts, Übergänge und Animationen, formatübergreifend unversehrt.</p>
+        <ul>
+          <li>Designs, Master und eigene Layouts</li>
+          <li>Eingangs-, Hervorhebungs-, Ausgangs- und Pfadanimationen</li>
+          <li>Referentenansicht mit Notizen und Timer</li>
+          <li>Export als Video</li>
+        </ul>
+        <div class="formats"><span>ODP</span><span>PPTX</span><span>PDF</span><span>MP4</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="eyebrow">Mit Sorgfalt gebaut</div>
+    <h2>Offene Formate, keine stillen Überraschungen.</h2>
+    <p class="intro">PulseOffice schreibt seinen eigenen OpenDocument- und Office-Open-XML-Code. Wenn ein Dateiformat etwas nicht aufnehmen kann, sagt es Ihnen das vor dem Speichern, statt es stillschweigend zu verwerfen.</p>
+    <div class="features">
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><path d="M17 15l2 2 3-3"/></svg></div>
+        <h3>Zuerst ODF, Office im Einklang</h3>
+        <p>OpenDocument ist der Standard. DOCX, XLSX und PPTX werden mit denselben Funktionen geschrieben und gelesen, oder der Verlust wird gemeldet.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
+        <h3>Signaturen und Verschlüsselung</h3>
+        <p>Digitale Signaturen in ODF, OOXML und PDF, Verschlüsselung mit Passwort und OpenPGP, automatisches Entfernen von Metadaten.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
+        <h3>Makros in JavaScript und Python</h3>
+        <p>Ein integrierter Editor mit Vervollständigung und Makrorekorder. Makros laufen in einer Sandbox: keine Dateien, kein Netz, keine Prozesse, außer Sie erlauben es.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10v8H7z"/><path d="M3 12h4M17 12h4M12 4v4M12 16v4"/></svg></div>
+        <h3>Objekte, die reisen</h3>
+        <p>Kopieren Sie ein Diagramm, eine Tabelle, eine Form oder einen Zellbereich von einer App in eine andere, und es bleibt bearbeitbar.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+        <h3>Fünf Sprachen</h3>
+        <p>Englisch, Italienisch, Deutsch, Spanisch und Französisch, einschließlich Funktionsnamen und Trennzeichen in jeder Sprache.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M3 9h18"/></svg></div>
+        <h3>Wirklich plattformübergreifend</h3>
+        <p>Dieselben Funktionen unter macOS, Windows und Linux, mit nativen Menüs, hellem und dunklem Design, Menüband und Befehlspalette.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="agent">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Bereit für KI-Agenten</div>
+      <h2>Nutzen Sie den KI-Agenten Ihrer Wahl.</h2>
+      <p class="intro">Ein eingebauter Server spricht MCP, das offene Model Context Protocol: Jeder MCP-fähige Agent kann Ihre geöffneten Dokumente lesen und bearbeiten, mit denselben Werkzeugen wie die Makros. Er arbeitet über lokales HTTP oder über eine kleine stdio-Brücke für Clients, die Server als Befehle starten. Die Beispieldokumente auf dieser Seite wurden so von einem Agenten erstellt.</p>
+      <ul class="checks">
+        <li>Standardmäßig aus, nur lokal, durch einen Zugangscode geschützt</li>
+        <li>Drei Stufen: lesen, bearbeiten, Dateien</li>
+        <li>Jede Änderung ist ein rückgängig machbarer Schritt, als Agent gekennzeichnet</li>
+        <li>Was sich nicht rückgängig machen lässt, wird vorher bestätigt</li>
+      </ul>
+    </div>
+    <div class="terminal" aria-label="Beispiel einer Agentensitzung">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div><span class="you">you ›</span> Add a total row and a chart to the sales sheet</div>
+      <div class="dim">&nbsp;</div>
+      <div><span class="tool">ledger_sheet_SetFormula</span> F9 = SUM(F4:F8)</div>
+      <div><span class="tool">ledger_rules_AddDataBar</span> F4:F8</div>
+      <div><span class="tool">ledger_sheet_AddChart</span> A3:E8 → column</div>
+      <div class="dim">&nbsp;</div>
+      <div><span class="ok">✓</span> Done. Totals come to 2,449,300; Asia Pacific</div>
+      <div>&nbsp;&nbsp;grew fastest, at 54%. Undo with ⌘Z.</div>
+    </div>
+  </div>
+</section>
+
+<section class="download" id="download">
+  <div class="wrap">
+    <div class="eyebrow">Kostenlos und Open Source</div>
+    <h2>PulseOffice herunterladen.</h2>
+    <p class="intro" style="margin: 0 auto">Signierte Installationsprogramme für jedes System finden Sie auf der GitHub-Release-Seite. PulseOffice ist noch in Entwicklung: Rechnen Sie mit Ecken und Kanten und sichern Sie wichtige Dokumente.</p>
+    <div class="cards">
+      <a class="card" href="https://github.com/pulseoffice/pulseoffice/releases/latest">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.3-3.51zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>
+        <strong>macOS</strong>
+        <span>Notarisiertes .dmg · Apple Silicon und Intel</span>
+      </a>
+      <a class="card" href="https://github.com/pulseoffice/pulseoffice/releases/latest">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1v7H3zM11.5 4.4L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.4z"/></svg>
+        <strong>Windows</strong>
+        <span>Installer · x64</span>
+      </a>
+      <a class="card" href="https://github.com/pulseoffice/pulseoffice/releases/latest">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+        <strong>Linux</strong>
+        <span>AppImage · x86_64 und ARM64</span>
+      </a>
+    </div>
+    <p class="build">Oder selbst bauen mit dem .NET 10 SDK:<code>dotnet run --project src/PulseOffice.Desktop</code></p>
+  </div>
+</section>
+
+<section class="soft" id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Fragen</div>
+    <h2>Häufige Fragen</h2>
+    <div class="faq">
+      <details><summary>Ist PulseOffice kostenlos?</summary><p>Ja. PulseOffice ist kostenlos und Open Source unter der Lizenz GPL-3.0, ohne Abonnement und ohne Konto.</p></details>
+      <details><summary>Kann PulseOffice Word-, Excel- und PowerPoint-Dateien öffnen?</summary><p>Ja. Es öffnet und speichert DOCX, XLSX und PPTX sowie die OpenDocument-Formate ODT, ODS und ODP und warnt vor dem Speichern, wenn ein Format etwas nicht aufnehmen kann.</p></details>
+      <details><summary>Auf welchen Systemen läuft PulseOffice?</summary><p>Linux (AppImage für x86_64 und ARM64), Windows (x64-Installer) und macOS (Apple Silicon und Intel).</p></details>
+      <details><summary>Ist es eine Alternative zu Microsoft Office?</summary><p>Das ist das Ziel: Dokumente, Tabellen und Präsentationen mit denselben Dateiformaten, kostenlos und auf jedem System.</p></details>
+      <details><summary>Ist PulseOffice für den Alltag bereit?</summary><p>Noch nicht. Es wird aktiv entwickelt: Probieren Sie es aus, melden Sie Probleme auf GitHub und sichern Sie wichtige Dokumente.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>PulseOffice · GPL-3.0-only · Mit Hilfe von KI entwickelt (<a href="https://claude.com/claude-code">Claude Code</a>)</div>
+    <div><a href="/">English</a> · <a href="https://github.com/pulseoffice/pulseoffice">GitHub</a> · <a href="https://github.com/pulseoffice/pulseoffice/releases">Releases</a> · <a href="https://github.com/pulseoffice/pulseoffice/blob/main/LICENSE">Lizenz</a></div>
+  </div>
+</footer>
+
+<script>
+const captions = {
+  ledger: "Ledger: Formeln, bedingte Formatierung und Diagramme, die in die anderen Apps wandern.",
+  folio: "Folio: Formatvorlagen, Listen und Tabellen in einem Angebot, bereit zum Teilen als ODT, DOCX oder PDF.",
+  deck: "Deck: Designs, Master, Übergänge und Referentenansicht.",
+};
+const alts = {
+  ledger: "Ledger mit einer Umsatztabelle nach Regionen, Formeln, Datenbalken, Farbskala und Säulendiagramm",
+  folio: "Folio mit einem Geschäftsangebot mit Titel, Überschriften und Text",
+  deck: "Deck mit einer dunklen Titelfolie, der Folienliste und dem Übergangsbereich",
+};
+const shot = document.getElementById("shot");
+const caption = document.getElementById("caption");
+for (const tab of document.querySelectorAll(".tab")) {
+  tab.addEventListener("click", () => {
+    for (const other of document.querySelectorAll(".tab")) other.setAttribute("aria-selected", String(other === tab));
+    shot.src = `/assets/${tab.dataset.shot}.png`;
+    shot.alt = alts[tab.dataset.shot];
+    caption.textContent = captions[tab.dataset.shot];
+  });
+}
+</script>
+</body>
+</html>
